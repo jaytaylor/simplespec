@@ -5,25 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.simple</groupId>
-    <artifactId>simplespec_2.9.1</artifactId>
+    <artifactId>simplespec_2.9.2</artifactId>
     <version>0.6.0</version>
     <packaging>jar</packaging>
-    
-    <name>simplespec for Scala ${scala.version}</name>
-    <url>https://github.com/SimpleFinance/simplespec</url>
-    <description>simplespec is a thin Scala wrapper over JUnit, featuring Hamcrest matchers, easy mocks, and literate test descriptions.</description>
 
     <properties>
-        <scala.version>2.9.1</scala.version>
+        <scala.version>2.9.2</scala.version>
     </properties>
 
-    <developers>
-        <developer>
-            <name>Simple</name>
-            <email>ted@simple.com</email>
-            <timezone>-8</timezone>
-        </developer>
-    </developers>
+    <name>simplespec for Scala ${scala.version}</name>
+    <url>https://github.com/jaytaylor/simplespec</url>
+    <description>simplespec is a thin Scala wrapper over JUnit, featuring Hamcrest matchers, easy mocks, and literate test descriptions.</description>
 
     <licenses>
         <license>
@@ -33,16 +25,12 @@
         </license>
     </licenses>
 
-    <scm>
-        <connection>scm:git:git://github.com/SimpleFinance/simplespec.git</connection>
-        <developerConnection>scm:git:git@github.com:SimpleFinance/simplespec.git</developerConnection>
-        <url>http://github.com/SimpleFinance/simplespec</url>
-    </scm>
-
-    <issueManagement>
-        <system>github</system>
-        <url>http://github.com/SimpleFinance/simplespec/issues#issue/</url>
-    </issueManagement>
+    <distributionManagement>
+        <repository>
+            <id>scala.sh</id>
+			<url>scp://ppx@scala.sh/var/www/scala.sh/public_html/repositories/releases</url>
+        </repository>
+    </distributionManagement>
 
     <repositories>
         <repository>
@@ -57,19 +45,6 @@
             </snapshots>
         </repository>
     </repositories>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
     <dependencies>
         <dependency>
@@ -112,7 +87,6 @@
             </build>
         </profile>
     </profiles>
-
 
     <build>
         <plugins>
